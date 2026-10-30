@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head><title>Projects | Your Name</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Figtree:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script><script src="assets/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/css/custom.css"></head>
+<body class="bg-ink text-slate-200 font-body text-[17px] leading-relaxed antialiased grid-bg">
+<div id="site-header"></div>
+<main id="top" class="max-w-6xl mx-auto px-6 pt-8">
+  <h1 data-scramble class="font-display font-bold text-4xl sm:text-5xl">Things I’ve built</h1>
+  <p class="text-mut mt-3 max-w-lg">Two projects I’m proud of. Both are still growing.</p>
+  <div data-reveal class="flex flex-wrap items-center gap-2 mt-8" role="group" aria-label="Filter projects">
+    <button data-filter="all" aria-pressed="true" class="bg-neon text-ink font-mono text-sm px-3.5 py-1.5 rounded-full border border-neon">All</button>
+    <button data-filter="backend" aria-pressed="false" class="font-mono text-sm px-3.5 py-1.5 rounded-full border border-line hover:border-neon">Backend</button>
+    <button data-filter="scripting" aria-pressed="false" class="font-mono text-sm px-3.5 py-1.5 rounded-full border border-line hover:border-neon">Scripting</button>
+    <span id="count" class="font-mono text-xs text-mut ml-2" aria-live="polite">Showing 2 of 2</span>
+  </div>
+  <div class="grid md:grid-cols-2 gap-5 mt-6 items-start">
+    <article data-tilt data-cat="backend" class="bg-panel border border-line rounded-xl p-7 hover:border-neon transition-colors">
+      <h2 class="font-display font-bold text-2xl">AI Study Companion backend</h2>
+      <p class="text-mut mt-3">The backend for a study helper. Students upload their course material, and the server takes it in so an AI can work with it later.</p>
+      <div class="flex flex-wrap gap-2 mt-4 font-mono text-xs"><span class="border border-line rounded px-2 py-0.5">Python</span><span class="border border-line rounded px-2 py-0.5">FastAPI</span><span class="border border-line rounded px-2 py-0.5">PDF</span><span class="border border-line rounded px-2 py-0.5">PPT / PPTX</span><span class="border border-line rounded px-2 py-0.5">MP4</span></div>
+      <ul class="mt-5 space-y-2 text-[15px]">
+        <li class="flex gap-3 items-baseline"><code class="font-mono text-xs px-2 py-0.5 rounded bg-lime/10 text-lime whitespace-nowrap">Phase 1 done</code>File upload for PDF, PPT, PPTX, and MP4.</li>
+        <li class="flex gap-3 items-baseline"><code class="font-mono text-xs px-2 py-0.5 rounded bg-hot/10 text-hot whitespace-nowrap">Phase 2 next</code>Text extraction, chunking, and embeddings.</li>
+      </ul>
+      <div id="d-study" hidden class="mt-5 text-[15px] text-mut border-t border-line pt-4">Files arrive through a FastAPI upload endpoint that accepts study material in four formats. Phase 2 will pull the text out, split it into chunks, and turn those into embeddings an AI can search.</div>
+      <div class="flex justify-between items-center mt-6 font-display font-bold text-sm">
+        <button data-toggle="d-study" aria-expanded="false" class="text-mut hover:text-white">How it works</button>
+        <a data-link="study" href="#" class="text-neon hover:underline px-2 py-1 border border-transparent rounded">View the code</a>
+      </div>
+    </article>
+    <article data-tilt data-cat="scripting" class="bg-panel border border-line rounded-xl p-7 hover:border-neon transition-colors">
+      <h2 class="font-display font-bold text-2xl">Python file organizer</h2>
+      <p class="text-mut mt-3">Point it at a messy folder and it reports every file’s name, extension, and size. That’s the groundwork for sorting the chaos into order.</p>
+      <div class="flex flex-wrap gap-2 mt-4 font-mono text-xs"><span class="border border-line rounded px-2 py-0.5">Python</span><span class="border border-line rounded px-2 py-0.5">pathlib</span></div>
+      <pre class="mt-5 bg-[#080c12] border border-line rounded-md p-3 font-mono text-xs text-mut overflow-x-auto"><span class="text-lime">$</span> python scan_folder.py <span class="text-neon">messy_folder/</span>
+notes.txt      .txt   1.2 KB
+lab_01.pdf     .pdf   844 KB
+img_final.png  .png   2.3 MB</pre>
+      <div id="d-org" hidden class="mt-5 text-[15px] text-mut border-t border-line pt-4">The script walks the folder with pathlib and collects each file’s name, extension, and size into a list, which later steps can use to group and move files.</div>
+      <div class="flex justify-between items-center mt-6 font-display font-bold text-sm">
+        <button data-toggle="d-org" aria-expanded="false" class="text-mut hover:text-white">How it works</button>
+        <a data-link="organizer" href="#" class="text-neon hover:underline px-2 py-1 border border-transparent rounded">View the code</a>
+      </div>
+    </article>
+  </div>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script><script src="assets/js/projects.js"></script>
+<script src="assets/js/fx.js"></script>
+</body></html>
