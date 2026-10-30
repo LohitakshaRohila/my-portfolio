@@ -4,8 +4,8 @@ const SITE = {
   github: "https://github.com/LohitakshaRohila",
   linkedin: "",
   email: "mailto:lohitaksharohila@gmail.com",
-  study: "https://github.com/YOUR_USERNAME/ai-study-companion",
-  organizer: "https://github.com/YOUR_USERNAME/file-organizer"
+  study: "https://github.com/LohitakshaRohila",
+  organizer: "https://github.com/LohitakshaRohila"
 };
 const isTodo = v => v.includes("YOUR_");
 
